@@ -47,14 +47,18 @@ macro(possibly_uninitialized)
   endforeach()
 endmacro()
 
+# There's no harm in including a project in a project
+project(pybind11_tests CXX)
+
+if(DEFINED PYVERSION)
+  find_package(Python ${PYVERSION} EXACT COMPONENTS Interpreter Development)
+endif()
+
 # New Python support
 if(DEFINED Python_EXECUTABLE)
   set(PYTHON_EXECUTABLE "${Python_EXECUTABLE}")
   set(PYTHON_VERSION "${Python_VERSION}")
 endif()
-
-# There's no harm in including a project in a project
-project(pybind11_tests CXX)
 
 # Access FindCatch and more
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../tools")

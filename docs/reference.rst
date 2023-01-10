@@ -49,8 +49,8 @@ Convenience classes for specific Python types
 .. doxygenclass:: module_
     :members:
 
-.. doxygengroup:: pytypes
-    :members:
+.. .. doxygengroup:: pytypes
+..     :members:
 
 Convenience functions converting to Python types
 ================================================

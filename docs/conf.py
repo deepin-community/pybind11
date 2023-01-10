@@ -37,8 +37,6 @@ DIR = Path(__file__).parent.resolve()
 # ones.
 extensions = [
     "breathe",
-    "sphinxcontrib.rsvgconverter",
-    "sphinxcontrib.moderncmakedomain",
 ]
 
 breathe_projects = {"pybind11": ".build/doxygenxml/"}
