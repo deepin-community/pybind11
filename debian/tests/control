@@ -20,6 +20,7 @@ Test-Command: set -e
  ; $py -c "import example; assert(example.add(1, 2) == 3)"
  ; done
 Depends: clang, cmake, pybind11-dev, python3-all-dev
+Architecture: alpha amd64 arm64 armhf hppa hurd-i386 i386 ia64 kfreebsd-amd64 kfreebsd-i386 m68k mips mips64el mipsel powerpc powerpcspe ppc64 ppc64el riscv64 s390x sh4 sparc64 x32
 Restrictions: allow-stderr
 
 Test-Command: set -e
@@ -36,7 +37,7 @@ Test-Command: set -e
  ; do cp -r tests ${AUTOPKGTEST_TMP}/tests-python$py
  ; cd ${AUTOPKGTEST_TMP}/tests-python$py
  ; cmake -DPYVERSION=$py .
- ; make
+ ; make VERBOSE=1
  ; python$py -m pytest
  ; cd $SRCDIR
  ; done
@@ -49,3 +50,4 @@ Depends: python3-all-dev,
  g++,
  libboost-dev,
  libeigen3-dev
+Restrictions: allow-stderr
