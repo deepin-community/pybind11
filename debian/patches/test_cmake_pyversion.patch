@@ -1,9 +1,9 @@
 Index: pybind11/tests/CMakeLists.txt
 ===================================================================
---- pybind11.orig/tests/CMakeLists.txt	2021-01-30 17:11:34.849003057 +0100
-+++ pybind11/tests/CMakeLists.txt	2021-01-30 17:11:34.841003034 +0100
-@@ -47,15 +47,19 @@
-   endforeach()
+--- pybind11.orig/tests/CMakeLists.txt	2023-07-23 04:20:29.190066489 +0200
++++ pybind11/tests/CMakeLists.txt	2023-07-23 04:20:29.182066417 +0200
+@@ -63,15 +63,19 @@
+   set(PYBIND11_TEST_EXTRA_TARGETS_ADDITION_${PYBIND11_TEST_EXTRA_TARGETS_LEN} ${additions})
  endmacro()
  
 +# There's no harm in including a project in a project
