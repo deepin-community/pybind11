@@ -1,3 +1,46 @@
+pybind11 (2.13.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Sourcefull update for Numpy 2.x transition (Closes: #1094717)
+
+ -- Alexandre Detiste <tchet@debian.org>  Fri, 31 Jan 2025 14:39:46 +0100
+
+pybind11 (2.13.6-1) unstable; urgency=medium
+
+  * d/control: Add myself as uploaders.
+  * d/rules: Remove unnecessary get-orig-source target.  
+  * New upstream version.
+  * d/gbp.conf: change debian-branch to debian/latest to be according to
+    DEP-14.
+
+ -- Emmanuel Arias <eamanu@debian.org>  Sun, 22 Sep 2024 11:11:53 -0300
+
+pybind11 (2.13.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Drew Parsons <dparsons@debian.org>  Sun, 01 Sep 2024 13:14:52 +0200
+
+pybind11 (2.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Build-Depends: furo, python3-sphinxcontrib.moderncmakedomain.
+    Update debian patch skip_sphinxcontrib_doc.patch.
+  * Standards-Version: 4.7.0
+
+ -- Drew Parsons <dparsons@debian.org>  Sat, 25 May 2024 17:08:02 +0200
+
+pybind11 (2.11.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * pybind11-dev Depends: libpython3-dev, not Recommends.
+    Python.h is #included (via #include chain) by pybind11.h.
+  * after dh_clean remove pytest cache files. Closes: #1048150.
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 13 Nov 2023 13:31:25 +0100
+
 pybind11 (2.11.1-1) unstable; urgency=medium
 
   * Team upload.
