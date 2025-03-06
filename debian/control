@@ -1,6 +1,7 @@
 Source: pybind11
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
-Uploaders: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Uploaders: Ghislain Antony Vaillant <ghisvail@gmail.com>,
+           Emmanuel Arias <eamanu@debian.org>
 Section: libs
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
@@ -17,12 +18,14 @@ Build-Depends: debhelper-compat (= 13),
                python3-pytest <!nocheck>,
                python3-scipy <!nocheck>,
                python3-setuptools,
+               furo <!nodoc>,
                python3-sphinx <!nodoc>,
                python3-sphinx-copybutton <!nodoc>,
                python3-sphinx-rtd-theme <!nodoc>,
+               python3-sphinxcontrib.moderncmakedomain <!nodoc>,
                python3-wheel,
                sphinx-common
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Vcs-Browser: https://salsa.debian.org/science-team/pybind11
 Vcs-Git: https://salsa.debian.org/science-team/pybind11.git
 Homepage: https://github.com/pybind/pybind11
@@ -31,8 +34,8 @@ Package: pybind11-dev
 Architecture: all
 Multi-Arch: foreign
 Section: libdevel
-Depends: ${misc:Depends}
-Recommends: libpython3-dev, libeigen3-dev
+Depends: libpython3-dev, ${misc:Depends}
+Recommends: libeigen3-dev
 Suggests: pybind11-doc <!nodoc>
 Description: seamless operability between C++11 and Python
  pybind11 is a lightweight header library that exposes C++ types in
